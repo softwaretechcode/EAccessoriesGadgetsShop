@@ -1,0 +1,40 @@
+<section class="container my-3">
+<div class="row">
+    <form (ngSubmit)="addProduct(addform.control.value)" #addform="ngForm" method="post">
+      <input type="number" hidden id="id" name="id" ngModel #id value="0">
+      <div class="col-sm-5" >
+      <input class="form-control" type="text" id="title" name="title" #title="ngModel" placeholder="Enter Product Title" ngModel>  
+    </div>
+      <!-- <input class="col-sm-5 form-control" type="text" id="title" name="title" #title="ngModel" placeholder="Enter Product Title" ngModel>  
+      <input class="col-sm-5 form-control" type="text" id="title" name="title" #title="ngModel" placeholder="Enter Product Title" ngModel>  
+       -->
+      <div class="my-2 col-sm-5">
+      Rating :-
+      <ngb-rating [(rate)]="currentRate"  [max]="5" ngModel #rating name="rating">
+        <ng-template let-fill="fill" let-index="index">
+          <i class="bi-star{{fill === 100 ? '-fill' : ''}}" [class.filled]="fill === 100" [class.low]="index < 2"></i>
+        </ng-template>
+      </ngb-rating> 
+    </div>
+    <div class="my-2 col-sm-10">
+     <textarea class="form-control" name="description" id="description" ngModel #description rows="10" placeholder="Enter Product Description"></textarea>
+    </div>
+     
+     <div class="col-sm-5">
+      <input class="form-control" type="number" name="price" id="price" ngModel #price placeholder="Enter Price">
+     </div>
+     <div class="my-2 col-sm-5">
+      <input class="form-control" type="text" name="category" id="category" ngModel #category placeholder="Enter Product category ">
+     </div>
+     <div class="my-2 col-sm-10">
+      <textarea class="form-control" type="text" name="review" id="review"  rows="5" ngModel #review placeholder="Write Review Of Product"></textarea>
+     </div>
+     
+     <input class="file-control" type="file" name="image_url" id="pimage" ngModel #image_url>
+      <input class="my-2 btn btn-warning" type="submit" value="Add Product"> 
+    </form>
+
+</div>
+
+
+</section>

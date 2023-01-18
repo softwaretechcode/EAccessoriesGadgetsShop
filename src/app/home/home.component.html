@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="p-5">
+        <div class="row d-flex justify-content-center text-center">
+            <div class="title">
+                <p>The Best Seller Of Electronic Accessories</p>
+                <h1><span>Best </span>Seller</h1>
+                <span></span>
+
+            </div>
+            <ngb-carousel *ngIf="product_list" class="my-2 bg-gradient">
+                <ng-template *ngFor="let product of product_list" ngbSlide >
+                    <div class="picsum-img-wrapper " data-bs-interval="60">
+                        <img class="product-header-img" src="{{product['image_url']}}" alt="{{product['title']}}" />
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 [routerLink]="['/single-product',product.id]">{{product['title'] | slice:0:100}}</h3>
+                        <p><strong> Price : </strong>{{product['price']}}</p>
+                    </div>
+                </ng-template>
+
+            </ngb-carousel>
+
+        </div></div>
+         <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                
+                <ng-container *ngFor="let product1 of product_full">
+                    <div class="col-sm-2 card m-2">
+                        <img src="{{product1['image_url']}}" alt="{{product1['title']}}" />
+                        <h5 [routerLink]="['/single-product',product1.id]">{{product1['title'] | slice:0:50}}</h5>
+                        <strong>Price : {{product1['price']}}</strong>
+                        <strong>Category : {{product1['category']}}</strong>
+                        <strong>Rating : {{product1['rating']}}</strong>
+                        <div>
+                            <button class="btn btn-warning" type="submit" (click)="addToCart(product1.id)"><i
+                                    class="bi bi-cart-plus-fill"></i></button>
+                            <button class="btn btn-warning m-1" type="submit"
+                                [routerLink]="['/single-product',product1.id]"><i class="bi bi-eye-fill"></i></button>
+                            <button class="btn btn-warning m-1" type="submit"
+                                onClick="window.open('https://shop.softwaretechit.com')">Buy Now</button>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+
+    
+</body>
+
+</html>

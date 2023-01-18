@@ -1,0 +1,14 @@
+i {
+    font-size: 1.5rem;
+    padding-right: 0.1rem;
+    color: #b0c4de;
+}
+.filled {
+    color: #f8ff1e;
+}
+.low {
+    color: #e200f6;
+}
+.filled.low {
+    color: #ff1e1e;
+}

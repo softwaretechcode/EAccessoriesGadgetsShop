@@ -1,0 +1,24 @@
+
+
+.title p{  
+color: #999;
+font-style: italic;
+font-weight: 700;
+margin: 0;
+
+}
+.title h1{
+    font-size: 44px;
+    color:#df08fb;
+    text-transform: capitalize;
+    text-underline-position: below;
+    text-decoration-line: underline;
+}
+.title h1 span{
+color: #fb8a08;
+}
+.product-header-img{
+    object-fit:contain;
+    height: 500px;
+    width: 100%;
+}

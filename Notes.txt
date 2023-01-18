@@ -1,0 +1,94 @@
+in angular.json file have all project stucture 
+in package.json file have all install packages
+src/app/app.module.ts file have all used componets and more that we are create and use in 
+our project
+src/index.html is a starting point of our project in index.html
+there is selector <app-root></app-root> this is root of the project and app project componets and more are 
+import/used in this file 
+this is come from AppComponet Class From app.componets.ts file  
+
+in angular 1 is used js and after anguler 1 come angular 2 thats have typescript language 
+and we are using angular 14 that why we are using typescript
+
+we need to learn first
+    html
+    Css 
+    typescript
+    and bootstrap css to create our project
+    we are created the RestAPI In Python For This Project we Can Change As Per Requirments 
+    becouse we Are creating FullStack Application
+    ok Then starting
+
+    we can use two ways to create componets 
+    in angular manual and with command
+    **(ng generate component component-name)**
+1 manual 
+create component in (create component-name folder) and inside folder 
+create component-name.component.ts /html/css files
+
+(in vscode)
+in app folder right click and choose new folder name it 
+and right click on folder and click new file create components file 
+in product folder
+this two files requred 
+    1 product.component.ts
+    2 product.component.html
+    and third is optional
+    3 product.component.css
+
+write the code of component becouse we are creating manual component in first step1
+this code is required to create angular component 
+
+import { Component } from "@angular/core";
+@Component({
+    selector:"product-component",
+    templateUrl:'./product.component.html',
+    styleUrls:["product.component.css"]
+})
+export class ProductComponent{  
+}
+
+then import this component in app.module.ts file to initiolize and run the project
+
+now we create a manual component lets create with command first open terminal/command prompt
+this is command to create component  ng generate component component-name
+also we have shortcut for this command 
+ng g c component-name ( g-> for generate, c-> component)
+
+
+****now today will stop here 
+tomorow we can list the product in component 
+ok ****
+//we are used shortcut, Prass and hold ALT And This Select Multiple line to chenge in one time
+
+Now Yesterday we Are Create A Component Lets Today Create A of Products 
+
+install bootstrap for css in this project
+
+using :- npm i bootstrap
+
+add in angular.json file  inside styles array
+"./node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+
+and add js files of bootstrap in Scripts tag
+"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+
+create responsive table 
+and create product model as datatype 
+use bootstrap css classes for create table
+
+ok all see you in next video 
+thank you
+
+in next video we are list products with card and images from json api 
+
+Thank You..........................
+
+Welcome to Video
+Now today we will add http service to get json data in list in the product page 
+we created the json API in Previous videos now
+ we are use this json to list the product
+
+Welcome  All 
+Today We Are Design the Home Page With Categorys of Products

@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="m-2 table table-striped ">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Pid</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let cart of cartProduct_list">
+                <tr>
+                <td>{{cart.id}}</td>
+                <td>{{cart.pid}}</td>
+                <th>{{cart.title | slice:0:100}}</th>
+                <th>{{cart.price}}</th>
+                <td><button class="btn btn-warning" type="submit" (click)="checkOutItem(cart.id)">Check Out</button></td>
+            </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

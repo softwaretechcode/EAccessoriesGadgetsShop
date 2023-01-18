@@ -1,0 +1,120 @@
+<section class="container my-2">
+  <div class="justify-items-center text-center card " style="background-color: antiquewhite;">
+    <div class="card-title">
+      <h5> Registration </h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <form class="needs-validation" (ngSubmit)="singUp(singup.control.value)" ngform #singup="ngForm">
+          <div class="form-row ">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name"
+                  required ngModel #firstname="ngModel" pattern="[a-zA-Z]+"
+                  [ngClass]="{'is-invalid':firstname.invalid && firstname.touched,'is-valid':firstname.valid && firstname.touched}">
+              </div>
+              <div class="col-md-6 col-md-6">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name" required
+                  ngModel #lastname="ngModel" pattern="[a-zA-Z]+"
+                  [ngClass]="{'is-invalid':lastname.invalid && lastname.touched, 'is-valid':lastname.valid && lastname.touched}">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="city" name="city" placeholder="City" required ngModel
+                    #city="ngModel" pattern="[a-zA-Z]+$"
+                    [ngClass]="{'is-invalid':city.invalid && city.touched, 'is-valid':city.valid && city.touched}">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="state" name="state" placeholder="State" required ngModel
+                    #state="ngModel" pattern="[a-zA-Z]+$"
+                    [ngClass]="{'is-invalid':state.invalid && state.touched, 'is-valid':state.valid && state.touched}">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip" required ngModel
+                    #zip="ngModel" pattern="[0-9]{6}$"
+                    [ngClass]="{'is-invalid':zip.invalid && zip.touched, 'is-valid':zip.valid && zip.touched}">
+                </div>
+                <div class="col-md-4 ">
+                  <label class="form-label">Gender : </label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required ngModel
+                      #gender="ngModel"><label>Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required
+                      ngModel #gender="ngModel"><label>Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="other" value="Other" required ngModel
+                      #gender="ngModel"><label>Other</label>
+                  </div>
+                  <h6 class="text-danger" *ngIf="gender.invalid && gender.touched"> Please Select Gender</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" required ngModel
+                    #email="ngModel" pattern="[A-Za-z0-9_!#&%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$"
+                    [ngClass]="{'is-invalid':email.invalid && email.touched,'is-valid':email.valid && email.touched}">
+                    <label
+                            *ngIf="email.invalid && email.touched && email.errors?.['pattern']"> Email is Invalid Enter Valid Email</label>
+                </div>
+               
+              </div>
+              <div class="row mb-3">
+              <div class="col-md-6 mb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                  </div>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Username" required
+                    ngModel #username="ngModel" pattern="[A-Za-z0-9-_]+$"
+                    [ngClass]="{'is-invalid':username.invalid && username.touched,'is-valid':username.valid && username.touched}">
+                </div>
+              </div>
+              <div class="col-md-5 ">
+                <label class="form-label">Married Status : </label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="married_status" id="married" value="Married" required ngModel
+                    #married_status="ngModel"><label>Married</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="married_status" id="unmarried" value="Unmarried" required
+                    ngModel #married_status="ngModel"><label>Unmarried</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="married_status" id="m_other" value="Other" required ngModel
+                    #married_status="ngModel"><label>Other</label>
+                </div>
+                <h6 class="text-danger" *ngIf="married_status.invalid && married_status.touched"> Please Select "Married Status" </h6>
+              </div>
+            </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="password" name="password" placeholder="Password" required
+                  ngModel #password="ngModel"
+                  [ngClass]="{'is-invalid':password.invalid && password.touched,'is-valid':password.valid && password.touched}">
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="confirmpassword" name="confirmpassword"
+                  placeholder="Confirm Password" required ngModel #confirmpassword="ngModel"
+                  [ngClass]="{'is-invalid':confirmpassword.invalid && confirmpassword.touched,'is-valid':confirmpassword.valid && confirmpassword.touched}" />
+                <label class="text-danger" *ngIf="password.value!=confirmpassword.value">Please provide a valid confirm
+                  password.</label>
+              </div>
+              
+            </div>
+            <button class="btn btn-primary" type="submit" >Submit form</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
