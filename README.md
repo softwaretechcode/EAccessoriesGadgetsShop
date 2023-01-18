@@ -1,7 +1,7 @@
 # EAccessoriesGadgetsShop
 
 This Project is in Master Branch Check This link :
-https://github.com/softwaretechit/EAccessoriesGadgetsShop/master
+https://github.com/softwaretechit/EAccessoriesGadgetsShop/tree/master
 here all product accessories Like <b>Laptop, Camera And More </b>
 
 Angular App Ecommerce Website 
