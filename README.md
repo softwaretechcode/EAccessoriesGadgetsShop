@@ -40,3 +40,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <li>https://link.softwaretechit.com</li>
 <li>https://blog.softwaretechit.com</li>
 <li>https://home.softwaretechit.com</li>
+<li>https://projects.softwaretechit.com/</li>
