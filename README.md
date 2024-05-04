@@ -2,7 +2,7 @@
 
 
 This Project is in Master Branch Check This link :
-https://github.com/softwaretechit/EAccessoriesGadgetsShop/tree/master
+https://github.com/softwaretechcode/EAccessoriesGadgetsShop/tree/master
 
 
 here all product accessories Like <b>Laptop, Camera And More </b>
@@ -41,3 +41,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <li>https://blog.softwaretechit.com</li>
 <li>https://home.softwaretechit.com</li>
 <li>https://projects.softwaretechit.com/</li>
+<li>https://web.softwaretechit.com/</li>
